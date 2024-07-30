@@ -1,0 +1,10 @@
+{
+    "type":"createaddition:rolling",
+    "input": {
+        "tag": "dough"
+    },
+    "result": {
+        "item": "pizzadelight:flat_dough",
+        "count": 1
+    }
+}

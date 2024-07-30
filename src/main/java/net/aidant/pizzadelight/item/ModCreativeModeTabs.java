@@ -20,6 +20,7 @@ public class ModCreativeModeTabs {
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.PIZZA.get());
                         pOutput.accept(ModItems.ROLLING_PIN.get());
+                        pOutput.accept(ModItems.FLAT_DOUGH.get());
                     })
                     .build());
 

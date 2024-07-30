@@ -17,6 +17,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> PIZZA = ITEMS.register("pizza",
             () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> FLAT_DOUGH = ITEMS.register("flat_dough",
+            () -> new Item(new Item.Properties()));
+
     //FIXME Make the rolling pin a weapon!!!
     public static final RegistryObject<Item> ROLLING_PIN = ITEMS.register("rolling_pin",
             () -> new RollingPinItem(new Item.Properties()

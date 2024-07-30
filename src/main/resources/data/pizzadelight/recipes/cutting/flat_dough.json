@@ -1,0 +1,17 @@
+{
+    "type": "farmersdelight:cutting",
+    "ingredients": [
+        {
+            "tag": "forge:dough"
+        }
+    ],
+    "result": [
+        {
+            "count": 1,
+            "item": "pizzadelight:flat_dough"
+        }
+    ],
+    "tool": {
+        "item": "pizzadelight:rolling_pin"
+    }
+}
