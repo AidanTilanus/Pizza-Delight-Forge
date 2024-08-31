@@ -3,20 +3,23 @@
 	"id": "pizzadelight",
 	"version": "${version}",
 	"name": "Pizza Delight",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "This is an addon for Create and Farmer Delight that adds pizza to the game.",
 	"authors": [
-		"Me!"
+		"Aidan_T"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://discord.gg/M9xg99rvRS",
+		"sources": "https://github.com/AidanTilanus/Pizza-Delight-1.20.1"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/pizzadelight/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
 			"com.aidant.pizzadelight.PizzaDelight"
+		],
+		"client": [
+			"com.aidant.pizzadelight.PizzaDelightClient"
 		],
 		"fabric-datagen": [
 			"com.aidant.pizzadelight.PizzaDelightDataGenerator"
