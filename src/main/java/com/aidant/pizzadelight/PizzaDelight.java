@@ -1,5 +1,6 @@
 package com.aidant.pizzadelight;
 
+import com.aidant.pizzadelight.item.ModCreativeModeTabs;
 import com.aidant.pizzadelight.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.api.distmarker.Dist;
@@ -27,6 +28,8 @@ public class PizzaDelight
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModCreativeModeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
@@ -36,11 +39,6 @@ public class PizzaDelight
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
-    {
-
-    }
-
-    private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
 
     }
