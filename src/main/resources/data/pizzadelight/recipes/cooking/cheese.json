@@ -1,0 +1,17 @@
+{
+    "type": "farmersdelight:cooking",
+    "cookingtime": 300,
+    "experience": 1.0,
+    "ingredients": [
+        {
+            "tag": "forge:milk"
+        },
+        {
+            "tag": "forge:eggs"
+        }
+    ],
+    "recipe_book_tab": "misc",
+    "result": {
+        "item": "pizzadelight:cheese"
+    }
+}

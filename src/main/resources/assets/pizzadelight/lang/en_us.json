@@ -1,5 +1,13 @@
 {
     "item.pizzadelight.rolling_pin": "Rolling Pin",
+    "item.pizzadelight.cheese": "Cheese",
+    "item.pizzadelight.cheese_slice": "Cheese Slice",
+    "item.pizzadelight.cheese_bread": "Cheese Sandwich",
 
-    "creativetab.pizzadelight_tab": "Pizza Delight"
+    "block.pizzadelight.cheese_block": "Block of Cheese",
+
+    "creativetab.pizzadelight_tab": "Pizza Delight",
+
+    "pizzadelight.advancement.cheese": "The Yellow Wheel!",
+    "pizzadelight.advancement.cheese.desc": "Craft some cheese with a cooking pot!"
 }

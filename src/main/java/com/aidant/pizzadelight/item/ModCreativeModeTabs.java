@@ -1,6 +1,7 @@
 package com.aidant.pizzadelight.item;
 
 import com.aidant.pizzadelight.PizzaDelight;
+import com.aidant.pizzadelight.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -19,6 +20,10 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.pizzadelight_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.ROLLING_PIN.get());
+                        output.accept(ModItems.CHEESE.get());
+                        output.accept(ModItems.CHEESE_SLICE.get());
+                        output.accept(ModBlocks.CHEESE_BLOCK.get());
+                        output.accept(ModItems.CHEESE_BREAD.get());
                     })
                     .build());
 
