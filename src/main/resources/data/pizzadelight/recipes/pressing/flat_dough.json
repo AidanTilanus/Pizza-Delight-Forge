@@ -1,0 +1,16 @@
+
+{
+	"type": "create:pressing",
+	"ingredients": [
+		[
+			{
+				"tag": "forge:dough"
+			}
+		]
+	],
+	"results": [
+		{
+			"item": "pizzadelight:flat_dough"
+		}
+	]
+}

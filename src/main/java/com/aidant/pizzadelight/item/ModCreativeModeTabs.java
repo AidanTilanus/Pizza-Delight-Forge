@@ -16,14 +16,18 @@ public class ModCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, PizzaDelight.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> PIZZA_DELIGHT = CREATIVE_MODE_TABS.register("pizzadelight_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.ROLLING_PIN.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.PIZZA.get()))
                     .title(Component.translatable("creativetab.pizzadelight_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.ROLLING_PIN.get());
+
                         output.accept(ModItems.CHEESE.get());
                         output.accept(ModItems.CHEESE_SLICE.get());
                         output.accept(ModBlocks.CHEESE_BLOCK.get());
                         output.accept(ModItems.CHEESE_BREAD.get());
+
+                        output.accept(ModItems.FLAT_DOUGH.get());
+                        output.accept(ModItems.PIZZA.get());
                     })
                     .build());
 
