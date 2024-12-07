@@ -14,7 +14,7 @@ public class ModItems {
     // --- ITEMS ---
 
     public static final RegistryObject<Item> ROLLING_PIN = ITEMS.register("rolling_pin",
-            () -> new Item(new Item.Properties().durability(120)));
+            () -> new Item(new Item.Properties().durability(120).stacksTo(1)));
 
     // -- Cheese --
 
