@@ -8,6 +8,10 @@
 	"result": [
 		{
 			"item": "pizzadelight:flat_dough"
+		},
+		{
+			"chance": 0.15,
+			"item": "create:wheat_flour"
 		}
 	],
 	"tool": {
