@@ -34,6 +34,7 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.FLAT_DOUGH.get());
                         output.accept(ModItems.PIZZA.get());
+                        output.accept(ModItems.PIZZA_SLICE.get());
                     })
                     .build());
 
