@@ -28,6 +28,16 @@ public class ModItems {
     public static final RegistryObject<Item> CHEESE_BREAD = ITEMS.register("cheese_bread",
             () -> new Item(new Item.Properties().food(ModFoods.CHEESE_BREAD)));
 
+    // -- Hotdog --
+    public static final RegistryObject<Item> RAW_SAUSAGE = ITEMS.register("raw_sausage",
+            () -> new Item(new Item.Properties().food(ModFoods.RAW_SAUSAGE)));
+
+    public static final RegistryObject<Item> SAUSAGE = ITEMS.register("cooked_sausage",
+            () -> new Item(new Item.Properties().food(ModFoods.SAUSAGE)));
+
+    public static final RegistryObject<Item> HOTDOG = ITEMS.register("hotdog",
+            () -> new Item(new Item.Properties().food(ModFoods.HOTDOG)));
+
     // -- Pizza --
 
     public static final RegistryObject<Item> FLAT_DOUGH = ITEMS.register("flat_dough",

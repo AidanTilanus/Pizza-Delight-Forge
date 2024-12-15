@@ -28,6 +28,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.POLISHED_CHEESE.get());
                         output.accept(ModItems.CHEESE_BREAD.get());
 
+                        output.accept(ModItems.RAW_SAUSAGE.get());
+                        output.accept(ModItems.SAUSAGE.get());
+                        output.accept(ModItems.HOTDOG.get());
+
                         output.accept(ModItems.FLAT_DOUGH.get());
                         output.accept(ModItems.PIZZA.get());
                     })

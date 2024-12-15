@@ -43,6 +43,22 @@
 					"item": "pizzadelight:incomplete_pizza"
 				}
 			]
+		},
+		{
+			"type": "create:deploying",
+			"ingredients": [
+				{
+					"item": "pizzadelight:incomplete_pizza"
+				},
+				{
+					"item": "pizzadelight:raw_sausage"
+				}
+			],
+			"results": [
+				{
+					"item": "pizzadelight:incomplete_pizza"
+				}
+			]
 		}
 	],
 	"transitionalItem": {
