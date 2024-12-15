@@ -24,6 +24,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.CHEESE.get());
                         output.accept(ModItems.CHEESE_SLICE.get());
                         output.accept(ModBlocks.CHEESE_BLOCK.get());
+                        output.accept(ModBlocks.CHEESE_BRICKS.get());
+                        output.accept(ModBlocks.POLISHED_CHEESE.get());
                         output.accept(ModItems.CHEESE_BREAD.get());
 
                         output.accept(ModItems.FLAT_DOUGH.get());

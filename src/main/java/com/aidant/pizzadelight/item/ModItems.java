@@ -1,6 +1,7 @@
 package com.aidant.pizzadelight.item;
 
 import com.aidant.pizzadelight.PizzaDelight;
+import com.simibubi.create.content.processing.sequenced.SequencedAssemblyItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -14,7 +15,7 @@ public class ModItems {
     // --- ITEMS ---
 
     public static final RegistryObject<Item> ROLLING_PIN = ITEMS.register("rolling_pin",
-            () -> new Item(new Item.Properties().durability(120).stacksTo(1)));
+            () -> new Item(new Item.Properties().durability(120)));
 
     // -- Cheese --
 
@@ -31,6 +32,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> FLAT_DOUGH = ITEMS.register("flat_dough",
             () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<SequencedAssemblyItem> INCOMPLETE_PIZZA = ITEMS.register("incomplete_pizza",
+            () -> new SequencedAssemblyItem(new Item.Properties()));
 
     public static final RegistryObject<Item> PIZZA = ITEMS.register("pizza",
             () -> new Item(new Item.Properties()));

@@ -25,7 +25,10 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> CHEESE_BLOCK = registerBlock("cheese_block",
             () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BANJO).strength(1.5F).sound(SoundType.WOOD).pushReaction(PushReaction.NORMAL)));
-
+    public static final RegistryObject<Block> CHEESE_BRICKS = registerBlock("cheese_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(ModBlocks.CHEESE_BLOCK.get())));
+    public static final RegistryObject<Block> POLISHED_CHEESE = registerBlock("polished_cheese",
+            () -> new Block(BlockBehaviour.Properties.copy(ModBlocks.CHEESE_BLOCK.get())));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

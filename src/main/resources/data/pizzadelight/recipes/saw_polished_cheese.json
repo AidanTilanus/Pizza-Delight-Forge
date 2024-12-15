@@ -1,0 +1,8 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": {
+		"item": "pizzadelight:cheese_block"
+	},
+	"result": "pizzadelight:polished_cheese",
+	"count": 1
+}
