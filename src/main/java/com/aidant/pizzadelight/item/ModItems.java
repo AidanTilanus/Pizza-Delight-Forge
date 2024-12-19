@@ -26,14 +26,14 @@ public class ModItems {
     public static final RegistryObject<Item> CHEESE_SLICE = ITEMS.register("cheese_slice",
             () -> new ConsumableItem(
                     new Item.Properties().food(ModFoods.CHEESE_SLICE),
-                    true,
+                    false,
                     false
             ));
 
     public static final RegistryObject<Item> CHEESE_BREAD = ITEMS.register("cheese_bread",
             () -> new ConsumableItem(
                     new Item.Properties().food(ModFoods.CHEESE_BREAD),
-                    true,
+                    false,
                     false
             ));
 
@@ -41,14 +41,14 @@ public class ModItems {
     public static final RegistryObject<Item> RAW_SAUSAGE = ITEMS.register("raw_sausage",
             () -> new ConsumableItem(
                     new Item.Properties().food(ModFoods.RAW_SAUSAGE),
-                    true,
+                    false,
                     false
             ));
 
     public static final RegistryObject<Item> SAUSAGE = ITEMS.register("cooked_sausage",
             () -> new ConsumableItem(
                     new Item.Properties().food(ModFoods.SAUSAGE),
-                    true,
+                    false,
                     false
             ));
 
