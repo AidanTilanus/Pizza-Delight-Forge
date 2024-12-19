@@ -7,6 +7,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import vectorwing.farmersdelight.common.item.ConsumableItem;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -23,20 +24,40 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> CHEESE_SLICE = ITEMS.register("cheese_slice",
-            () -> new Item(new Item.Properties().food(ModFoods.CHEESE_SLICE)));
+            () -> new ConsumableItem(
+                    new Item.Properties().food(ModFoods.CHEESE_SLICE),
+                    true,
+                    false
+            ));
 
     public static final RegistryObject<Item> CHEESE_BREAD = ITEMS.register("cheese_bread",
-            () -> new Item(new Item.Properties().food(ModFoods.CHEESE_BREAD)));
+            () -> new ConsumableItem(
+                    new Item.Properties().food(ModFoods.CHEESE_BREAD),
+                    true,
+                    false
+            ));
 
     // -- Hotdog --
     public static final RegistryObject<Item> RAW_SAUSAGE = ITEMS.register("raw_sausage",
-            () -> new Item(new Item.Properties().food(ModFoods.RAW_SAUSAGE)));
+            () -> new ConsumableItem(
+                    new Item.Properties().food(ModFoods.RAW_SAUSAGE),
+                    true,
+                    false
+            ));
 
     public static final RegistryObject<Item> SAUSAGE = ITEMS.register("cooked_sausage",
-            () -> new Item(new Item.Properties().food(ModFoods.SAUSAGE)));
+            () -> new ConsumableItem(
+                    new Item.Properties().food(ModFoods.SAUSAGE),
+                    true,
+                    false
+            ));
 
     public static final RegistryObject<Item> HOTDOG = ITEMS.register("hotdog",
-            () -> new Item(new Item.Properties().food(ModFoods.HOTDOG)));
+            () -> new ConsumableItem(
+                    new Item.Properties().food(ModFoods.HOTDOG),
+                    true,
+                    false
+            ));
 
     // -- Pizza --
 
@@ -50,7 +71,11 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> PIZZA_SLICE = ITEMS.register("pizza_slice",
-            () -> new Item(new Item.Properties().food(ModFoods.PIZZA_SLICE)));
+            () -> new ConsumableItem(
+                    new Item.Properties().food(ModFoods.PIZZA_SLICE),
+                    true,
+                    false
+            ));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
