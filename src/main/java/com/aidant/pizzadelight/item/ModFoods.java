@@ -14,7 +14,7 @@ public class ModFoods {
 
     public static final FoodProperties PIZZA_SLICE = new FoodProperties.Builder()
             .nutrition(10).saturationMod(1.0F)
-            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 600, 0), 1.0F).build();
+            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 3600, 0), 1.0F).build();
 
     public static final FoodProperties RAW_SAUSAGE = new FoodProperties.Builder()
             .nutrition(3).saturationMod(0.3F).meat().build();
