@@ -22,8 +22,6 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 
-//FIXME - Disable culling
-
 public class PizzaBlock extends Block {
 
     private static final IntegerProperty BITES = IntegerProperty.create("bites", 0, 3);

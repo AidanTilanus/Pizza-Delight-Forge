@@ -35,7 +35,7 @@ public class ModBlocks {
     // -- Pizza --
 
     public static final RegistryObject<Block> PIZZA = registerBlock("pizza",
-            () -> new PizzaBlock(BlockBehaviour.Properties.copy(Blocks.CAKE).mapColor(MapColor.COLOR_ORANGE)));
+            () -> new PizzaBlock(BlockBehaviour.Properties.copy(Blocks.CAKE).mapColor(MapColor.COLOR_ORANGE).noOcclusion()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
