@@ -5,6 +5,7 @@ import com.aidant.pizzadelight.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
@@ -32,6 +33,9 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(ModBlocks.CHEESE_BLOCK.get())));
 
     // -- Pizza --
+
+    public static final RegistryObject<Block> PIZZA = registerBlock("pizza",
+            () -> new PizzaBlock(BlockBehaviour.Properties.copy(Blocks.CAKE).mapColor(MapColor.COLOR_ORANGE)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

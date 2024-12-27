@@ -8,12 +8,12 @@
     "item.pizzadelight.cooked_sausage": "Cooked Sausage",
     "item.pizzadelight.hotdog": "Hotdog",
     "item.pizzadelight.incomplete_pizza": "Incomplete Pizza",
-    "item.pizzadelight.pizza": "Pizza",
     "item.pizzadelight.pizza_slice": "Pizza Slice",
 
     "block.pizzadelight.cheese_block": "Block of Cheese",
     "block.pizzadelight.cheese_bricks": "Cheese Bricks",
     "block.pizzadelight.polished_cheese": "Polished Cheese",
+    "block.pizzadelight.pizza": "Pizza",
 
     "creativetab.pizzadelight_tab": "Pizza Delight",
 

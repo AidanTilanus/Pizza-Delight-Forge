@@ -67,8 +67,8 @@ public class ModItems {
     public static final RegistryObject<SequencedAssemblyItem> INCOMPLETE_PIZZA = ITEMS.register("incomplete_pizza",
             () -> new SequencedAssemblyItem(new Item.Properties()));
 
-    public static final RegistryObject<Item> PIZZA = ITEMS.register("pizza",
-            () -> new Item(new Item.Properties()));
+    // public static final RegistryObject<Item> PIZZA = ITEMS.register("pizza",
+    //         () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> PIZZA_SLICE = ITEMS.register("pizza_slice",
             () -> new ConsumableItem(

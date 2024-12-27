@@ -16,7 +16,7 @@ public class ModCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, PizzaDelight.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> PIZZA_DELIGHT = CREATIVE_MODE_TABS.register("pizzadelight_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.PIZZA.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.PIZZA.get()))
                     .title(Component.translatable("creativetab.pizzadelight_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.ROLLING_PIN.get());
@@ -33,7 +33,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.HOTDOG.get());
 
                         output.accept(ModItems.FLAT_DOUGH.get());
-                        output.accept(ModItems.PIZZA.get());
+                        output.accept(ModBlocks.PIZZA.get());
                         output.accept(ModItems.PIZZA_SLICE.get());
                     })
                     .build());
