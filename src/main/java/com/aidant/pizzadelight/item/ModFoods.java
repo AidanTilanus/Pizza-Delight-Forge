@@ -2,7 +2,7 @@ package com.aidant.pizzadelight.item;
 
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.food.FoodProperties;
-import vectorwing.farmersdelight.common.registry.ModEffects; // Import Farmer's Delight effect
+import vectorwing.farmersdelight.common.registry.ModEffects;
 
 public class ModFoods {
 
