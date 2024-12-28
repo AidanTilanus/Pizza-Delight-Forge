@@ -1,12 +1,12 @@
-package com.aidant.pizzadelight.block;
+package com.aidant.pizzadelight.block.custom;
 
-import com.aidant.pizzadelight.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -22,14 +22,19 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.function.Supplier;
+
 public class PizzaBlock extends Block {
 
     private static final IntegerProperty BITES = IntegerProperty.create("bites", 0, 3);
     private static final VoxelShape PIZZA_SHAPE = Shapes.box(0, 0, 0, 1, 0.25, 1);
 
-    public PizzaBlock(Properties properties) {
+    private final Supplier<Item> sliceItem;
+
+    public PizzaBlock(Properties properties, Supplier<Item> sliceItem) {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(BITES, 0));
+        this.sliceItem = sliceItem;
     }
 
     @Override
@@ -39,7 +44,6 @@ public class PizzaBlock extends Block {
 
     @Override
     public @NotNull RenderShape getRenderShape(@NotNull BlockState state) {
-        // Ensure the block renders using the model
         return RenderShape.MODEL;
     }
 
@@ -49,17 +53,18 @@ public class PizzaBlock extends Block {
             ItemStack heldItem = player.getItemInHand(hand);
             int bites = state.getValue(BITES);
 
-            // Check if the held item is in the "forge:tools/knives" tag
             if (heldItem.is(ItemTags.create(new ResourceLocation("forge", "tools/knives")))) {
-                // Drop two pizza slices
-                ItemStack dropStack = new ItemStack(ModItems.PIZZA_SLICE.get(), 2);
+                ItemStack dropStack = new ItemStack(this.sliceItem.get(), 2); // Use Supplier to get the item
                 popResource(level, pos, dropStack);
 
+                // damage the knife
+                heldItem.hurtAndBreak(1, player, (p) -> {
+                    p.broadcastBreakEvent(hand); // Notify other players of the tool breaking
+                });
+
                 if (bites < 3) {
-                    // Update the block's state
                     level.setBlock(pos, state.setValue(BITES, bites + 1), 3);
                 } else {
-                    // Remove the block when fully eaten
                     level.removeBlock(pos, false);
                 }
 
@@ -72,8 +77,6 @@ public class PizzaBlock extends Block {
     @Override
     public boolean canSurvive(@NotNull BlockState state, @NotNull LevelReader level, @NotNull BlockPos pos) {
         BlockPos belowPos = pos.below();
-
-        // Ensure there is any block below (not air)
         return !level.isEmptyBlock(belowPos);
     }
 
@@ -81,7 +84,7 @@ public class PizzaBlock extends Block {
     public void onPlace(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, @NotNull BlockState oldState, boolean isMoving) {
         if (!level.isClientSide()) {
             if (!canSurvive(state, level, pos)) {
-                level.destroyBlock(pos, true); // Break the block immediately if unsupported
+                level.destroyBlock(pos, true);
             }
         }
     }
@@ -90,14 +93,13 @@ public class PizzaBlock extends Block {
     public void neighborChanged(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, @NotNull Block block, @NotNull BlockPos neighborPos, boolean isMoving) {
         if (!level.isClientSide()) {
             if (!canSurvive(state, level, pos)) {
-                level.destroyBlock(pos, true); // Break the block if the neighbor (support) is removed
+                level.destroyBlock(pos, true);
             }
         }
     }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.@NotNull Builder<Block, BlockState> builder) {
-        // Add the BITES property to the block state
         builder.add(BITES);
     }
 }

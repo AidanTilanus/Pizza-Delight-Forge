@@ -1,6 +1,7 @@
 package com.aidant.pizzadelight.block;
 
 import com.aidant.pizzadelight.PizzaDelight;
+import com.aidant.pizzadelight.block.custom.PizzaBlock;
 import com.aidant.pizzadelight.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -35,7 +36,9 @@ public class ModBlocks {
     // -- Pizza --
 
     public static final RegistryObject<Block> PIZZA = registerBlock("pizza",
-            () -> new PizzaBlock(BlockBehaviour.Properties.copy(Blocks.CAKE).mapColor(MapColor.COLOR_ORANGE).noOcclusion()));
+            () -> new PizzaBlock(BlockBehaviour.Properties.copy(Blocks.CAKE).mapColor(MapColor.COLOR_ORANGE).noOcclusion().noLootTable(),
+                    ModItems.PIZZA_SLICE::get
+            ));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

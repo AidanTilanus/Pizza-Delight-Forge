@@ -1,7 +1,0 @@
-{
-	"parent": "pizzadelight:block/pizza/pizza_block2",
-	"textures": {
-		"all": "pizzadelight:block/pizza_block",
-		"particle": "pizzadelight:block/pizza_block"
-	}
-}
