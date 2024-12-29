@@ -62,7 +62,7 @@ logoBlur = false
 [[dependencies.${mod_id}]]
     modId="create"
     mandatory=true
-    versionRange="[0.5.1.j,)"
+    versionRange="[0.5.1.f,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.${mod_id}]]
