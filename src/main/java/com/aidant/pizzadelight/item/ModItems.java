@@ -1,6 +1,7 @@
 package com.aidant.pizzadelight.item;
 
 import com.aidant.pizzadelight.PizzaDelight;
+import com.aidant.pizzadelight.item.custom.RollingPinItem;
 import com.simibubi.create.content.processing.sequenced.SequencedAssemblyItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -17,7 +18,7 @@ public class ModItems {
     // --- ITEMS ---
 
     public static final RegistryObject<Item> ROLLING_PIN = ITEMS.register("rolling_pin",
-            () -> new FuelItem(new Item.Properties().durability(120), 200));
+            () -> new RollingPinItem(new Item.Properties().durability(120)));
 
     // -- Cheese --
 

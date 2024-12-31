@@ -1,16 +1,16 @@
 package com.aidant.pizzadelight.item.custom;
 
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.crafting.RecipeType;
 import org.jetbrains.annotations.Nullable;
 
-public class FuelItem extends Item {
-    private int burnTime = 0;
+public class RollingPinItem extends AxeItem {
+    int burnTime = 200;
 
-    public FuelItem(Properties pProperties, int burnTime) {
-        super(pProperties);
-        this.burnTime = burnTime;
+    public RollingPinItem(Properties pProperties) {
+        super(Tiers.WOOD, 14f,-3.8f ,pProperties);
     }
 
     @Override
