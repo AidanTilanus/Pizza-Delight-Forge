@@ -18,5 +18,7 @@
     "creativetab.pizzadelight_tab": "Pizza Delight",
 
     "pizzadelight.advancement.cheese": "The Yellow Wheel!",
-    "pizzadelight.advancement.cheese.desc": "Craft some cheese with a cooking pot!"
+    "pizzadelight.advancement.cheese.desc": "Craft some cheese with a cooking pot!",
+    "pizzadelight.advancement.scammer": "Scammer!",
+    "pizzadelight.advancement.scammer.desc": "Trick a piglin into trading with cheese."
 }
