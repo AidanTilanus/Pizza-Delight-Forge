@@ -4,6 +4,7 @@ import com.aidant.pizzadelight.block.ModBlocks;
 import com.aidant.pizzadelight.item.ModCreativeModeTabs;
 import com.aidant.pizzadelight.item.ModItems;
 import com.mojang.logging.LogUtils;
+import net.minecraft.world.entity.monster.piglin.PiglinAi;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -40,7 +41,6 @@ public class PizzaDelight
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
