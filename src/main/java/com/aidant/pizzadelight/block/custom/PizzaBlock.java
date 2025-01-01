@@ -35,6 +35,8 @@ public class PizzaBlock extends Block {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(BITES, 0));
         this.sliceItem = sliceItem;
+
+
     }
 
     @Override
@@ -45,6 +47,17 @@ public class PizzaBlock extends Block {
     @Override
     public @NotNull RenderShape getRenderShape(@NotNull BlockState state) {
         return RenderShape.MODEL;
+    }
+
+    @Override
+    public boolean hasAnalogOutputSignal(@NotNull BlockState state) {
+        return true;
+    }
+
+    @Override
+    public int getAnalogOutputSignal(@NotNull BlockState state, Level level, BlockPos pos) {
+        int bites = state.getValue(BITES);
+        return (4 - bites) * 15 / 4;
     }
 
     @Override
