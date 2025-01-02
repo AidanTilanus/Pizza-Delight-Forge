@@ -4,6 +4,9 @@
         "trade_cheese_slice": {
             "trigger": "minecraft:thrown_item_picked_up_by_entity",
             "conditions": {
+                "player": {
+                    "type": "minecraft:player"
+                },
                 "item": {
                     "item": "pizzadelight:cheese_slice"
                 },
@@ -15,7 +18,7 @@
     },
     "display": {
         "icon": {
-            "id": "pizzadelight:cheese"
+            "item": "pizzadelight:cheese_slice"
         },
         "title": {
             "translate": "pizzadelight.advancement.scammer"
@@ -27,6 +30,6 @@
         "hidden": true
     },
     "rewards": {
-        "experience": 500
+        "experience": 200
     }
 }
